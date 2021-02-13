@@ -1,15 +1,23 @@
 import React from 'react'
 import { Container, Grid } from "@material-ui/core";
-
 import SearchForm from "./searchform/SearchForm";
-
 import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({
-  headerWrapper: {
-    marginLeft: theme.spacing(13),
-    marginRight: theme.spacing(13),
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    marginLeft: "45px"
+  },
+  margin: {
+    margin: theme.spacing(1),
+  },
+  withoutLabel: {
+    marginTop: theme.spacing(3),
+  },
+  textField: {
+    width: "25ch",
   },
 }));
 
@@ -17,9 +25,8 @@ const SearchHeader = () => {
     const classes = useStyles();
 
     return (
-      <Container item xs={12}>
-        <Grid maxWidth="lg">
-          <div className={classes.headerWrapper}>
+      <Container className="search_head" >
+        <Grid container className={classes.root}>
             <div className="search__header">
               <ul className="search__header__items">
                 <li className="search__header__list">
@@ -33,7 +40,6 @@ const SearchHeader = () => {
                 </li>
               </ul>
             </div>
-          </div>
         </Grid>
         <SearchForm />
       </Container>
