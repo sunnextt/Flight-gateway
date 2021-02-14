@@ -1,7 +1,14 @@
 import React from 'react'
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
+import SearchIcon from "@material-ui/icons/SearchOutlined";
+import AirplanemodeActiveOutlinedIcon from "@material-ui/icons/AirplanemodeActiveOutlined";
+import EventAvailableOutlinedIcon from "@material-ui/icons/EventAvailableOutlined";
+import SupervisorAccountOutlinedIcon from "@material-ui/icons/SupervisorAccountOutlined";
+
+
+
+
 
 
 
@@ -11,22 +18,38 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    flexGrow: 1,
     margin: theme.spacing(5),
+  },
+  icon: {
+    fontSize: 100,
+    color: "#ad146a",
+    display: "block",
+    padding: "1rem",
+    margin: "auto",
+    borderRadius: "50%",
+    boxShadow: "2px 0 20px 0 rgba(100, 103, 121, 0.21)",
   },
   item: {
     padding: theme.spacing(10),
     "& h5": {
-        fontSize: "20px",
-        fontWeight: "700",
+      fontSize: "20px",
+      fontWeight: "700",
+      margin: "20px",
+      textAlign: "center",
     },
     "& p": {
-        fontSize: "16px",
-        fontWeight: "500",
-        color: theme.palette.text.secondary,
-
-    }
-
+      fontSize: "16px",
+      fontWeight: "500",
+      color: theme.palette.text.secondary,
+      textAlign: "center",
+    },
+    "& hr": {
+      marginBottom: "22px",
+      width: "50px",
+      backgroundColor: "#42d4ec",
+      height: "2px",
+      border: "none",
+    },
   },
 }));
 
@@ -38,37 +61,59 @@ const Enlight = () => {
   const classes = useStyles();
 
     return (
-      <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={3} className={classes.item}>
-            <h5>The World's Travel Search Engine</h5>
-            <p>
-              You can use our search engine to find any flight you want and
-              select a desired destination and price.
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className={classes.item}>
-            <h5>Cheap and Beneficial Air Tickets</h5>
-            <p>
-              We provide affordable tickets to the flights of almost all
-              existing airlines so you don’t need to look for them.
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className={classes.item}>
-            <h5>Our Support Lines are Open 24/7</h5>
-            <p>
-              Our 24/7 support operators are always ready to help you select a
-              proper flight according to your needs.
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className={classes.item}>
-            <h5>Convenient Payment Method For You</h5>
-            <p>
-              We provide a variety of payment methods including cheque, cash,
-              and credit cards.
-            </p>
-          </Grid>
+      <div>
+        <Grid className="why_choose_us">
+          <h5>Why People Choose Us</h5>
+          <h2>Our Advantages</h2>
+          <hr />
         </Grid>
+        <div className={classes.root}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6} md={3} className={classes.item}>
+              <span>
+                <SearchIcon className={classes.icon} />
+              </span>
+              <h5>User-Friendly Search System</h5>
+               <hr />
+              <p>
+                Convenient and fast search for airline tickets, hotels and cars.
+              </p>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} className={classes.item}>
+              <span>
+                <AirplanemodeActiveOutlinedIcon className={classes.icon} />
+              </span>
+              <h5>The Most Reliable Airlines</h5>
+               <hr />
+              <p>
+                We cooperate only with the most reliable airlines who can boast
+                the perfect reputation.
+              </p>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} className={classes.item}>
+              <span>
+                <SupervisorAccountOutlinedIcon className={classes.icon} />
+              </span>
+              <h5>More Than 7M Visitors Each Month</h5>
+               <hr />
+              <p>
+                More than 7 million people use our services to find and book
+                airline tickets.
+              </p>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} className={classes.item}>
+              <span>
+                <EventAvailableOutlinedIcon className={classes.icon} />{" "}
+              </span>
+              <h5>Fast and Reliable Ticket Booking</h5>
+               <hr />
+              <p>
+                We provide reliable ticket booking system, which is also perfect
+                for first-time travellers.
+              </p>
+            </Grid>
+          </Grid>
+        </div>
       </div>
     );
 }

@@ -10,15 +10,6 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     marginLeft: "45px"
   },
-  margin: {
-    margin: theme.spacing(1),
-  },
-  withoutLabel: {
-    marginTop: theme.spacing(3),
-  },
-  textField: {
-    width: "25ch",
-  },
 }));
 
 const SearchHeader = () => {
@@ -26,7 +17,7 @@ const SearchHeader = () => {
 
     return (
       <Container className="search_head" >
-        <Grid container className={classes.root}>
+        <Grid  className={classes.root}>
             <div className="search__header">
               <ul className="search__header__items">
                 <li className="search__header__list">

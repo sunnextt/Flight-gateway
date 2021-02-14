@@ -2,10 +2,16 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 ul {
@@ -80,7 +86,8 @@ label {
 }
 
 .search__header {
-  margin-top: 1rem;
+  margin-top: 3rem;
+  margin-left: -12px;
 }
 
 .search__header__items {
@@ -137,3 +144,32 @@ label {
 	position:relative;
 	top:1px;
 }
+
+
+/* Why choose us section */
+
+.why_choose_us {
+text-align: center;
+margin: 5rem auto;
+
+}
+
+.why_choose_us h2 {
+  font-size: 48px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #1f2746;
+  margin-top: 0px;
+  margin-bottom: 26px;
+  
+}
+.why_choose_us h5 {
+ color: #22a9bf;
+}
+
+.why_choose_us hr{ 
+  height: 3px;
+  width: 80px;
+  background-color: #c62a82;
+  }
+
