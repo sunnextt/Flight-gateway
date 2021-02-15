@@ -3,6 +3,8 @@ html {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  color: #1f2746;
+
 }
 
 * {
@@ -17,6 +19,20 @@ h5 {
 ul {
   margin: 0;
 }
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+hr { 
+  height: 3px;
+  width: 80px;
+  background-color: #c62a82;
+  }
 
 input {
   color: #ffffff !important;
@@ -150,7 +166,7 @@ label {
 
 .why_choose_us {
 text-align: center;
-margin: 5rem auto;
+margin: 3rem auto;
 
 }
 
@@ -167,9 +183,58 @@ margin: 5rem auto;
  color: #22a9bf;
 }
 
-.why_choose_us hr{ 
-  height: 3px;
-  width: 80px;
-  background-color: #c62a82;
-  }
+/* flight best offer section */
+.best_offers_headline {
+text-align: center;
+margin: 2rem auto;
+}
 
+.best_offers h3 {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #22a9bf;
+}
+
+.best_offers h4 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+    color: #1f2746;
+
+  margin: 10px 10px;
+  padding-top: 10px;
+
+
+}
+.best_offers h5 {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #22a9bf;
+  margin: 0px 10px 5px;
+}
+.best_offers p {
+  font-size: 16px;
+  color: #1f2746;
+  font-weight: 400;
+  margin: 0px 10px 5px;
+
+}
+.best_offers span {
+  font-size: 16px;
+  font-weight: 400;
+    color: #1f2746;
+  margin: 0px 10px 5px;
+
+}
+
+.best_offers .book_now {
+  display: flex;
+  flex-direction: column;
+    color: #1f2746;
+    margin: 10px 10px;
+    padding-bottom: 10px;
+}
+.book_now span {
+  font-size: 13px;
+  font-weight: 700;
+}

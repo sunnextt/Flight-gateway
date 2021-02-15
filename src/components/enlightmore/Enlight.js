@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    margin: theme.spacing(5),
+    margin: theme.spacing(4),
   },
   icon: {
     fontSize: 100,
@@ -53,7 +53,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+const style = {
+  marginBottom: "2PX"
+}
 
 
 const Enlight = () => {
@@ -63,7 +65,7 @@ const Enlight = () => {
     return (
       <div>
         <Grid className="why_choose_us">
-          <h5>Why People Choose Us</h5>
+          <h5 style={style} >Why People Choose Us</h5>
           <h2>Our Advantages</h2>
           <hr />
         </Grid>
