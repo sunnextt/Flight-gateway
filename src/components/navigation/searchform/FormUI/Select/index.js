@@ -55,7 +55,6 @@ const SelectWrapper = ({ name, options, ...otherProps }) => {
     variant: "outlined",
     color: "primary",
     fullWidth: true,
-    textColor: "white",
     onChange: handleChange,
   };
 

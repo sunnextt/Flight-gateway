@@ -43,7 +43,7 @@ const BestFlightDeal = () => {
                       <span>22 sep 2021 - 29 sep 2021</span>
                     </div>
                     <div className="book_now">
-                      <a href="/book">Book Now</a>
+                      {/* <a href="/book">Book Now</a> */}
                       <span>offer found 9 hours ago</span>
                     </div>
                   </a>
@@ -60,7 +60,7 @@ const BestFlightDeal = () => {
                       <span>22 sep 2021 - 29 sep 2021</span>
                     </div>
                     <div className="book_now">
-                      <a href="/book">Book Now</a>
+                      {/* <a href="/book">Book Now</a> */}
                       <span>offer found 9 hours ago</span>
                     </div>
                   </a>
@@ -77,7 +77,7 @@ const BestFlightDeal = () => {
                       <span>22 sep 2021 - 29 sep 2021</span>
                     </div>
                     <div className="book_now">
-                      <a href="/book">Book Now</a>
+                      {/* <a href="/book">Book Now</a> */}
                       <span>offer found 9 hours ago</span>
                     </div>
                   </a>
@@ -94,7 +94,7 @@ const BestFlightDeal = () => {
                       <span>22 sep 2021 - 29 sep 2021</span>
                     </div>
                     <div className="book_now">
-                      <a href="/book">Book Now</a>
+                      {/* <a href="/book">Book Now</a> */}
                       <span>offer found 9 hours ago</span>
                     </div>
                   </a>

@@ -90,7 +90,7 @@ const classes = useStyles();
                     <Field
                       name="flightType"
                       options={options}
-                      component={CheckboxWrapper}
+                      component={CheckboxWrapper }
                     />
                   </Grid>
                   <Grid container>
