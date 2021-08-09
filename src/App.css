@@ -194,3 +194,39 @@ margin: 2rem auto;
 .holidays_deal {
   height: 80vh;
 }
+
+
+/* RECENTBLOGS */
+
+.recentblogs {
+text-align: center;
+margin: 3rem auto;
+}
+
+.recentblogs h2 {
+  font-size: 48px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #1f2746;
+  margin-top: 0px;
+  margin-bottom: 26px;
+  
+}
+.recentblogs h5 {
+ color: #22a9bf;
+}
+
+/* ['owl-prev','owl-next'] */
+.owl-theme .owl-nav {
+  background-color: #c62a82;
+  width: 10rem;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next, 
+.owl-dot {
+  color: white;
+	cursor: pointer;
+	cursor: hand;
+}
+

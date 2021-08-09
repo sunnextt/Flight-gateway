@@ -6,6 +6,8 @@ import BestFlightDeal from "./components/flightDeal/BestFlightDeal";
 import HolidayDestinations from "./components/Holidays/HolidayDestinations";
 import content from "./data/HolidayData"
 import "./App.css";
+import { Support } from "./components/supports/Supports";
+import { RecentsBlogs } from "./components/recentBlogs/RecentsBlogs";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <SearchHeader />
       <Enlight />
       <BestFlightDeal />
-      <HolidayDestinations data={content} />
+      <Support />
+      {/* <HolidayDestinations data={content} /> */}
+      <RecentsBlogs />
     </div>
   );
 }

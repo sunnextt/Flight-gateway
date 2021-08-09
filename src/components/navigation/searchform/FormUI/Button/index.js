@@ -11,6 +11,7 @@ const ButtonWrapper = ({ children, ...otherProps }) => {
 
   const configButton = {
     ...otherProps,
+    variant: "contained",
     fullWidth: true,
     onClick: handleSubmit,
   };

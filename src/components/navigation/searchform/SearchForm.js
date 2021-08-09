@@ -56,8 +56,20 @@ const useStyles = makeStyles((theme) => ({
     margin: "1rem auto"
   },
   searchbtn: {
-    padding: "1rem",
-    fontWeight: "bold",
+    display: "inline-block",
+    verticalAlign: "middle",
+    textTransform: "uppercase",
+    letterSpacing: "o.oemem",
+    fontsize: "20px",
+    lineHeight: "1.5",
+    fontWeight: 900,
+    borderRadius: 0,
+    boxShadow: "0 2px 10px 0 rgb(0 0 0 / 23%)",
+    border: "none",
+    padding: "20px 45px",
+    cursor: "pointer",
+    backgroundColor: "#c62a82",
+    background: "linear-gradient(0deg, #ad146a 0%, #c62a82 100%)",
   }
 }));
 
@@ -142,8 +154,8 @@ const classes = useStyles();
                       </a>
                     </div> */}
                     <Grid item xs={12} sm={6} className={classes.search}>
-                      <ButtonWrapper variant="contained" color="secondary" className={classes.searchbtn}>
-                        SEARCH
+                      <ButtonWrapper  color="secondary" className={classes.searchbtn}>
+                        SEARCH FLIGHT
                       </ButtonWrapper>
                     </Grid>
                   </Grid>
