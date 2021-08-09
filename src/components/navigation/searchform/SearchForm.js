@@ -10,6 +10,7 @@ import CheckboxWrapper from "./FormUI/CheckBox/index";
 import passenger from "../../../data/passenger.json";
 import age from "../../../data/age.json";
 import classOfService from "../../../data/classOfService.json";
+import ButtonWrapper from './FormUI/Button';
 
 const options =["One way", "Return"]
 
@@ -49,6 +50,15 @@ const useStyles = makeStyles((theme) => ({
   radio: {
     marginLeft: "10px",
   },
+  search: {
+    // marginBottom: theme.spacing(2),
+    // margintop: theme.spacing(2),
+    margin: "1rem auto"
+  },
+  searchbtn: {
+    padding: "1rem",
+    fontWeight: "bold",
+  }
 }));
 
 
@@ -94,43 +104,48 @@ const classes = useStyles();
                     />
                   </Grid>
                   <Grid container>
-                    <Grid className={classes.textField}>
+                    <Grid item xs={12} sm={5} md={3}className={classes.textField}>
                       <Textfield name="flyingFrom" label="Flying From" />
                     </Grid>
-                    <Grid className={classes.textField}>
+                    <Grid item xs={12} sm={5} md={3} className={classes.textField}>
                       <Textfield name="flyingTo" label="Flying To" />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={12} sm={5} md={2} className={classes.select}>
                       <DateTimePicker
                         name="departureDate"
                         label="Departure Date"
                       />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={12} sm={5} md={2} className={classes.select}>
                       <DateTimePicker name="returnDate" label="REturn Date" />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={5} sm={3} className={classes.select}>
                       <SelectWrapper
                         name="classOfService"
                         label="Class Of Service"
                         options={classOfService}
                       />
                     </Grid>
-                    <Grid className={classes.textField}>
+                    <Grid item xs={5} sm={3} className={classes.textField}>
                       <SelectWrapper
                         name="passenger"
                         label="Passenger"
                         options={passenger}
                       />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={3}  className={classes.select}>
                       <SelectWrapper name="age" label="Age" options={age} />
                     </Grid>
-                    <div className="button_div">
+                    {/* <div className="button_div">
                       <a href="#/" className="search_button">
                         SEARCH
                       </a>
-                    </div>
+                    </div> */}
+                    <Grid item xs={12} sm={6} className={classes.search}>
+                      <ButtonWrapper variant="contained" color="secondary" className={classes.searchbtn}>
+                        SEARCH
+                      </ButtonWrapper>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Form>
