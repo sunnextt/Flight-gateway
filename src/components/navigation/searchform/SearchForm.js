@@ -21,17 +21,18 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    width: "95%",
+    width: "100%",
     marginTop: "1ch",
     color: "white",
     backgroundColor: "rgba(40, 127, 199, 0.900)",
   },
   formWrapper: {
-    marginLeft: theme.spacing(15),
-    marginRight: theme.spacing(15),
+    // marginLeft: theme.spacing(15),
+    // marginRight: theme.spacing(15),
   },
   margin: {
-    margin: theme.spacing(1),
+    margin: 0,
+    padding:  0
   },
   textField: {
     margin: theme.spacing(1),
@@ -94,8 +95,8 @@ const SearchForm = () => {
 const classes = useStyles();
 
     return (
-      <Grid item xs={12}>
-        <Container maxWidth="lg">
+      <Grid item xs={12} className={classes.margin}>
+        <Container maxWidth="lg" className={classes.margin}>
           <div>
             <Formik
               initialValues={{
@@ -106,7 +107,7 @@ const classes = useStyles();
                 console.log(values);
               }}
             >
-              <Form style={{ marginLeft: "50px" }}>
+              <Form >
                 <Grid className={classes.root}>
                   <Grid className={classes.radio}>
                     <Field

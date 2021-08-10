@@ -8,6 +8,7 @@ import content from "./data/HolidayData"
 import "./App.css";
 import { Support } from "./components/supports/Supports";
 import { RecentsBlogs } from "./components/recentBlogs/RecentsBlogs";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Support />
       {/* <HolidayDestinations data={content} /> */}
       <RecentsBlogs />
+      <Footer />
     </div>
   );
 }

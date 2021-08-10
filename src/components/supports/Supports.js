@@ -15,9 +15,9 @@ container: {
     justifyContent: "center",
     textAlign: "center",
     backgroundImage: `url(${imageUrl})`,
-    [theme.breakpoints.down('xs')]: {
-    height: "100%",
-    },
+    // [theme.breakpoints.down('xs')]: {
+    // height: "100%",
+    // },
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",

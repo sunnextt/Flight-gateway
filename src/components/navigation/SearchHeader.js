@@ -12,11 +12,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    marginLeft: "45px",
-  },
+    width: "100%",
+    },
   searchHeader: {
   marginTop: "3rem",
-  marginLeft: "-12px",
+  display: "flex",
+  flexDirection: "row"
+   
 },
 searchHead: {
   height: "95vh",
@@ -37,26 +39,26 @@ const SearchHeader = () => {
     const classes = useStyles();
 
     return (
-      <Container className={classes.searchHead} >
-        <div>
-            <Grid  className={classes.root}>
-            <div className={classes.searchHeader}>
-              <ul className="search__header__items">
-                <li className="search__header__list">
-                  <a href="/flight">Flight</a>
-                </li>
-                <li className="search__header__list">
-                  <a href="/hotel">Hotel</a>
-                </li>
-                <li className="search__header__list">
-                  <a href="/travel">Travel</a>
-                </li>
-              </ul>
-            </div>
-        </Grid>
-          <SearchForm />
-        </div>
-      </Container>
+      <Grid container className={classes.searchHead} >
+            <Grid item xs={11} sm={11} md={9}  style={{margin: "0 auto"}}>
+                <div>
+                  <Grid className={classes.root}>
+                    <div className={classes.searchHeader}>
+                      <li className="search__header__list">
+                        <a href="/flight">Flight</a>
+                      </li>
+                      <li className="search__header__list">
+                        <a href="/hotel">Hotel</a>
+                      </li>
+                      <li className="search__header__list">
+                        <a href="/travel">Travel</a>
+                      </li>
+                  </div>
+                  </Grid>
+                  <SearchForm />
+                </div>
+            </Grid>
+      </Grid>
     );
 }
 

@@ -88,12 +88,6 @@ label {
   color: #234354;
   cursor: pointer;
 }
-
-.search__header__items {
-  display: flex;
-  flex-direction: row;
-}
-
 .search__header__list {
   list-style: none;
   text-decoration: none;
