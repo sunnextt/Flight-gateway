@@ -25,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "red",
     },
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
-      color: "purple",
+      color: "white",
     },
     "& .MuiInputLabel-root.Mui-focused": {
-      color: "purple",
+      color: "white",
     },
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "purple",
+      borderColor: "white",
     },
   },
 }));

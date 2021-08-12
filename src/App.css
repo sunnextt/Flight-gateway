@@ -34,15 +34,15 @@ hr {
   background-color: #c62a82;
   }
 
-input {
+/* input {
   color: #ffffff !important;
   font-weight: 500;
-}
+} */
 
-label {
+/* label {
   color: #ffffff !important;
   font-weight: 500;
-}
+} */
 
 .main_header {
   display: flex;

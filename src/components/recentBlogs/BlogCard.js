@@ -67,7 +67,7 @@ export const BlogCard = () => {
             <Typography style={{color: '#3e3f40', fontsize: "10px", fontweight: "bold", padding: "2rem auto"}}>
                 september 12, 2019
             </Typography>
-          <Typography gutterBottom variant="h5" component="h2" style={{color: "#3e3f40;",fontWeight: 700}}>
+          <Typography gutterBottom variant="h5" component="h2" style={{color: "#3e3f40",fontWeight: 700}}>
             9 Ways to Become a Successful Travel Blogger
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" style={{color: "#3e3f40"}}>
