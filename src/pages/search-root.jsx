@@ -4,6 +4,7 @@ import SearchAutocomplete from "../components/search-autocomplete";
 import { getAmadeusData } from "../api/amadeus.api";
 import axios from "axios"
 import SearchCheckboxes from "../components/search-checkboxes";
+import { Grid } from "@material-ui/core";
 
 // Main component 
 const SearchRoot = () => {
@@ -69,13 +70,15 @@ const SearchRoot = () => {
   }, [search]);
 
   return (
-    <div className="container">
-      <div className="search-panel">
-        <SearchAutocomplete search={search} setSearch={setSearch} />
-        <SearchCheckboxes search={search} setSearch={setSearch} />
-      </div>
-      <SearchTable dataSource={dataSource} search={search} setSearch={setSearch} loading={loading} />
-    </div>
+    <Grid container className="container">
+      <Grid item xs={12} sm={12} md={12} style={{margin: "2rem 0"}}>
+        <div className="search-panel">
+          <SearchAutocomplete search={search} setSearch={setSearch} />
+          <SearchCheckboxes search={search} setSearch={setSearch} />
+        </div>
+        <SearchTable dataSource={dataSource} search={search} setSearch={setSearch} loading={loading} />
+      </Grid>
+    </Grid>
   );
 };
 

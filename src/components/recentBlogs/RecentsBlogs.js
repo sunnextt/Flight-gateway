@@ -113,7 +113,7 @@ export const RecentsBlogs = () => {
 
     return (
         <Grid container >
-        <Grid item xs={12} sm={10} md={12}className="recentblogs" style={{margin: "0 auto  3rem"}}>
+        <Grid item xs={12} sm={10} md={12}className="recentblogs" style={{margin: "3rem auto  3rem"}}>
           <h5 style={style} >Recent Blog Posts</h5>
           <h2>Tips & Tricks</h2>
           <hr />
