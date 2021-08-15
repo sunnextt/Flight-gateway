@@ -1,16 +1,16 @@
-import userTypes from './user.types';
+import userTypes from '../../Types';
 
 const INITIAL_STATE = {
-  currentUser: null,
+  airport: null,
 
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case userTypes.SIGN_IN_SUCCESS:
+    case userTypes.SEARCH_AIRPORT:
       return {
         ...state,
-
+        airport: action.payload
       }
     default:
       return state;

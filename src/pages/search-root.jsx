@@ -1,20 +1,21 @@
 import React from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import SearchTable from "../components/search-table";
 import SearchAutocomplete from "../components/search-autocomplete";
 import { getAmadeusData } from "../api/amadeus.api";
 import axios from "axios"
 import SearchCheckboxes from "../components/search-checkboxes";
+import  SearchAirport from "../redux/action/SearchAction"
+
 import { Grid } from "@material-ui/core";
+
+
 
 // Main component 
 const SearchRoot = () => {
 
-  /* 
-    With new React API we can define state in functional component like this *React.useState*
-    1. first element in desctructured array - state itself
-    2. second element - dispatch func, that allows us to change state
-    3. we can create as many states as we need
-  */
+  const dispatch = useDispatch()
+
   const [search, setSearch] = React.useState({
     keyword: "a",
     city: true,
@@ -42,31 +43,27 @@ const SearchRoot = () => {
   React.useEffect(() => {
     // Turn on loader animation
     setLoading(true)
+    dispatch(SearchAirport(search))
 
 
-    /* Getting data from amadeus api.
-       out - our data that coming from backend.
-       source - token for cancelation request.
-    */
+    // const { out, source } = getAmadeusData(search);
 
-    const { out, source } = getAmadeusData(search);
+    // out.then(res => {
+    //   // If we send too many request to the api per second - we will get an error and app will break
+    //   // Therefore we implemented simple check to prevent error on client side.
+    //   if (!res.data.code) {
+    //     setDataSource(res.data); // dispatching data to components state
+    //   }
+    //   setLoading(false)
+    // }).catch(err => {
+    //   axios.isCancel(err);
+    //   setLoading(false)
+    // });
 
-    out.then(res => {
-      // If we send too many request to the api per second - we will get an error and app will break
-      // Therefore we implemented simple check to prevent error on client side.
-      if (!res.data.code) {
-        setDataSource(res.data); // dispatching data to components state
-      }
-      setLoading(false)
-    }).catch(err => {
-      axios.isCancel(err);
-      setLoading(false)
-    });
-
-    // If we returning function from *useEffect* - then this func will execute, when component will unmount
-    return () => {
-      source.cancel()
-    };
+    // // If we returning function from *useEffect* - then this func will execute, when component will unmount
+    // return () => {
+    //   source.cancel()
+    // };
   }, [search]);
 
   return (
