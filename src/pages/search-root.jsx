@@ -6,29 +6,35 @@ import { getAmadeusData } from "../api/amadeus.api";
 import axios from "axios"
 import SearchCheckboxes from "../components/search-checkboxes";
 import  SearchAirport from "../redux/action/SearchAction"
-
 import { Grid } from "@material-ui/core";
-
 
 
 // Main component 
 const SearchRoot = () => {
-
-  const dispatch = useDispatch()
-
+  
   const [search, setSearch] = React.useState({
     keyword: "a",
     city: true,
     airport: true,
     page: 0
   });
-
+  
   const [dataSource, setDataSource] = React.useState({
     meta: { count: 0 },
     data: []
   });
 
+  console.log(dataSource);
+
+  // const mapState = ({ search }) => ({
+  //   airport: search.airport,
+  // });
+  // const  data = useSelector(mapState)
+  // console.log(data);
+  // setDataSource(data)
+  
   const [loading, setLoading] = React.useState(false)
+  // const dispatch = useDispatch()
 
   /* 
     Also React has lifecycle methods. On of them is *useEffect* - the same as ComponentDidMount | ComponentDidUpdate | ComponentWillUnmount in class components 
@@ -43,27 +49,27 @@ const SearchRoot = () => {
   React.useEffect(() => {
     // Turn on loader animation
     setLoading(true)
-    dispatch(SearchAirport(search))
+    // dispatch(SearchAirport(search))
 
 
-    // const { out, source } = getAmadeusData(search);
+    const { out, source } = getAmadeusData(search);
 
-    // out.then(res => {
-    //   // If we send too many request to the api per second - we will get an error and app will break
-    //   // Therefore we implemented simple check to prevent error on client side.
-    //   if (!res.data.code) {
-    //     setDataSource(res.data); // dispatching data to components state
-    //   }
-    //   setLoading(false)
-    // }).catch(err => {
-    //   axios.isCancel(err);
-    //   setLoading(false)
-    // });
+    out.then(res => {
+      // If we send too many request to the api per second - we will get an error and app will break
+      // Therefore we implemented simple check to prevent error on client side.
+      if (!res.data.code) {
+        setDataSource(res.data); // dispatching data to components state
+      }
+      setLoading(false)
+    }).catch(err => {
+      axios.isCancel(err);
+      setLoading(false)
+    });
 
-    // // If we returning function from *useEffect* - then this func will execute, when component will unmount
-    // return () => {
-    //   source.cancel()
-    // };
+    // If we returning function from *useEffect* - then this func will execute, when component will unmount
+    return () => {
+      source.cancel()
+    };
   }, [search]);
 
   return (

@@ -1,11 +1,11 @@
 import userTypes from '../../Types';
 
 const INITIAL_STATE = {
-  airport: null,
+  airport: {},
 
 };
 
-const userReducer = (state = INITIAL_STATE, action) => {
+const searchReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case userTypes.SEARCH_AIRPORT:
       return {
@@ -17,4 +17,4 @@ const userReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default userReducer;
+export default searchReducer;
