@@ -36,18 +36,8 @@ const SearchRoot = () => {
   const [loading, setLoading] = React.useState(false)
   // const dispatch = useDispatch()
 
-  /* 
-    Also React has lifecycle methods. On of them is *useEffect* - the same as ComponentDidMount | ComponentDidUpdate | ComponentWillUnmount in class components 
-    1. First argument is callback func, we define there all logic we need to execute when component mounts
-    2. Second argument - array of dependencies. If one of them changing - we executing callback func again
 
-    ** If Array is empty - callback will execute only once, when mount
-    ** If you not including second argument - callback will execute each time, when component will change
-
-    3. We can create as many *useEffect* funcs, as we need
-  */
   React.useEffect(() => {
-    // Turn on loader animation
     setLoading(true)
     // dispatch(SearchAirport(search))
 
