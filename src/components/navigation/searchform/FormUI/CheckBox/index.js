@@ -11,9 +11,8 @@ const style = {
 
 const renderOptions = (options) => {
   return options.map((option) => (
-    <div style={style} >
+    <div style={style} key={option} >
       <FormControlLabel
-        key={option}
         value={option}
         control={<Radio />}
         label={option}
@@ -30,7 +29,8 @@ const fieldName = name ||field.name
 
 
   return (
-    <RadioGroup style={{flexDirection: "row"}}
+    <RadioGroup
+      style={{ flexDirection: "row" }}
       {...field}
       {...props}
       name={fieldName}

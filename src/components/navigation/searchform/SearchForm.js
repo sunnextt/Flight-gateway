@@ -10,6 +10,7 @@ import CheckboxWrapper from "./FormUI/CheckBox/index";
 import passenger from "../../../data/passenger.json";
 import age from "../../../data/age.json";
 import classOfService from "../../../data/classOfService.json";
+import ButtonWrapper from './FormUI/Button';
 
 const options =["One way", "Return"]
 
@@ -20,17 +21,18 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    width: "95%",
+    width: "100%",
     marginTop: "1ch",
     color: "white",
     backgroundColor: "rgba(40, 127, 199, 0.900)",
   },
   formWrapper: {
-    marginLeft: theme.spacing(15),
-    marginRight: theme.spacing(15),
+    // marginLeft: theme.spacing(15),
+    // marginRight: theme.spacing(15),
   },
   margin: {
-    margin: theme.spacing(1),
+    margin: 0,
+    padding:  0
   },
   textField: {
     margin: theme.spacing(1),
@@ -49,6 +51,27 @@ const useStyles = makeStyles((theme) => ({
   radio: {
     marginLeft: "10px",
   },
+  search: {
+    // marginBottom: theme.spacing(2),
+    // margintop: theme.spacing(2),
+    margin: "1rem auto"
+  },
+  searchbtn: {
+    display: "inline-block",
+    verticalAlign: "middle",
+    textTransform: "uppercase",
+    letterSpacing: "o.oemem",
+    fontsize: "20px",
+    lineHeight: "1.5",
+    fontWeight: 900,
+    borderRadius: 0,
+    boxShadow: "0 2px 10px 0 rgb(0 0 0 / 23%)",
+    border: "none",
+    padding: "20px 45px",
+    cursor: "pointer",
+    backgroundColor: "#c62a82",
+    background: "linear-gradient(0deg, #ad146a 0%, #c62a82 100%)",
+  }
 }));
 
 
@@ -72,8 +95,8 @@ const SearchForm = () => {
 const classes = useStyles();
 
     return (
-      <Grid item xs={12}>
-        <Container maxWidth="lg">
+      <Grid item xs={12} className={classes.margin}>
+        <Container maxWidth="lg" className={classes.margin}>
           <div>
             <Formik
               initialValues={{
@@ -84,53 +107,58 @@ const classes = useStyles();
                 console.log(values);
               }}
             >
-              <Form style={{ marginLeft: "50px" }}>
+              <Form >
                 <Grid className={classes.root}>
                   <Grid className={classes.radio}>
                     <Field
                       name="flightType"
                       options={options}
-                      component={CheckboxWrapper}
+                      component={CheckboxWrapper }
                     />
                   </Grid>
                   <Grid container>
-                    <Grid className={classes.textField}>
+                    <Grid item xs={12} sm={5} md={3}className={classes.textField}>
                       <Textfield name="flyingFrom" label="Flying From" />
                     </Grid>
-                    <Grid className={classes.textField}>
+                    <Grid item xs={12} sm={5} md={3} className={classes.textField}>
                       <Textfield name="flyingTo" label="Flying To" />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={12} sm={5} md={2} className={classes.select}>
                       <DateTimePicker
                         name="departureDate"
                         label="Departure Date"
                       />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={12} sm={5} md={2} className={classes.select}>
                       <DateTimePicker name="returnDate" label="REturn Date" />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={5} sm={3} className={classes.select}>
                       <SelectWrapper
                         name="classOfService"
                         label="Class Of Service"
                         options={classOfService}
                       />
                     </Grid>
-                    <Grid className={classes.textField}>
+                    <Grid item xs={5} sm={3} className={classes.textField}>
                       <SelectWrapper
                         name="passenger"
                         label="Passenger"
                         options={passenger}
                       />
                     </Grid>
-                    <Grid className={classes.select}>
+                    <Grid item xs={3}  className={classes.select}>
                       <SelectWrapper name="age" label="Age" options={age} />
                     </Grid>
-                    <div className="button_div">
+                    {/* <div className="button_div">
                       <a href="#/" className="search_button">
                         SEARCH
                       </a>
-                    </div>
+                    </div> */}
+                    <Grid item xs={12} sm={6} className={classes.search}>
+                      <ButtonWrapper  color="secondary" className={classes.searchbtn}>
+                        SEARCH FLIGHT
+                      </ButtonWrapper>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Form>

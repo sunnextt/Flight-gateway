@@ -16,22 +16,22 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "white",
     },
     "&:hover .MuiOutlinedInput-input": {
-      color: "red",
+      color: "white",
     },
     "&:hover .MuiInputLabel-root": {
-      color: "red",
+      color: "white",
     },
     "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-      borderColor: "red",
+      borderColor: "white",
     },
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
-      color: "purple",
+      color: "white",
     },
     "& .MuiInputLabel-root.Mui-focused": {
-      color: "purple",
+      color: "white",
     },
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "purple",
+      borderColor: "white",
     },
   },
 }));
