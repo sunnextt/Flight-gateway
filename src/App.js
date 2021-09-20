@@ -21,7 +21,7 @@ function App() {
       <Support />
       {/* <HolidayDestinations data={content} /> */}
       <RecentsBlogs />
-      <SearchRoot />
+      {/* <SearchRoot /> */}
       <Footer />
     </div>
   );
