@@ -1,11 +1,9 @@
 import React from "react";
-import { useDispatch, useSelector } from 'react-redux';
 import SearchTable from "../components/search-table";
 import SearchAutocomplete from "../components/search-autocomplete";
 import { getAmadeusData } from "../api/amadeus.api";
 import axios from "axios"
 import SearchCheckboxes from "../components/search-checkboxes";
-import  SearchAirport from "../redux/action/SearchAction"
 import { Grid } from "@material-ui/core";
 
 
@@ -25,28 +23,17 @@ const SearchRoot = () => {
   });
 
   console.log(dataSource);
-
-  // const mapState = ({ search }) => ({
-  //   airport: search.airport,
-  // });
-  // const  data = useSelector(mapState)
-  // console.log(data);
-  // setDataSource(data)
   
   const [loading, setLoading] = React.useState(false)
-  // const dispatch = useDispatch()
 
 
   React.useEffect(() => {
     setLoading(true)
-    // dispatch(SearchAirport(search))
 
 
     const { out, source } = getAmadeusData(search);
 
     out.then(res => {
-      // If we send too many request to the api per second - we will get an error and app will break
-      // Therefore we implemented simple check to prevent error on client side.
       if (!res.data.code) {
         setDataSource(res.data); // dispatching data to components state
       }
@@ -56,7 +43,6 @@ const SearchRoot = () => {
       setLoading(false)
     });
 
-    // If we returning function from *useEffect* - then this func will execute, when component will unmount
     return () => {
       source.cancel()
     };

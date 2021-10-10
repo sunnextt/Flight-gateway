@@ -1,4 +1,4 @@
-import { all, call, put, takeEvery, takeLatest } from 'redux-saga/effects'
+import { all, call } from 'redux-saga/effects'
 
 function* log() {
     yield call(console.log("hello world"))

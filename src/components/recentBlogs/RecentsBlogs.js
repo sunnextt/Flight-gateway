@@ -112,7 +112,7 @@ export const RecentsBlogs = () => {
     };
 
     return (
-        <Grid container >
+        <Grid container style={{padding: "1rem"}} >
         <Grid item xs={12} sm={10} md={12}className="recentblogs" style={{margin: "3rem auto  3rem"}}>
           <h5 style={style} >Recent Blog Posts</h5>
           <h2>Tips & Tricks</h2>
