@@ -3,13 +3,11 @@ import Header from './components/navigation/Header'
 import SearchHeader from "./components/navigation/SearchHeader";
 import Enlight from './components/enlightmore/Enlight'
 import BestFlightDeal from "./components/flightDeal/BestFlightDeal";
-// import HolidayDestinations from "./components/Holidays/HolidayDestinations";
-// import content from "./data/HolidayData"
 import "./App.css";
 import { Support } from "./components/supports/Supports";
 import { RecentsBlogs } from "./components/recentBlogs/RecentsBlogs";
 import Footer from "./components/footer/Footer";
-import SearchRoot from "./pages/search-root";
+// import SearchRoot from "./pages/search-root";
 
 function App() {
   return (
@@ -19,9 +17,8 @@ function App() {
       <Enlight />
       <BestFlightDeal />
       <Support />
-      {/* <HolidayDestinations data={content} /> */}
       <RecentsBlogs />
-      <SearchRoot />
+      {/* <SearchRoot /> */}
       <Footer />
     </div>
   );
